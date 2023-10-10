@@ -1,8 +1,7 @@
-﻿namespace Domain.Entities
+﻿namespace Application.EventBus.Models
 {
-    public class ConsumerToBusiness
+    public class ConsumerToBusinessReceivedEvent
     {
-        public long ConsumerToBusinessId { get; set; }
         public string TransactionType { get; set; } = string.Empty;
         public string TransID { get; set; } = string.Empty;
         public string TransTime { get; set; } = string.Empty;
