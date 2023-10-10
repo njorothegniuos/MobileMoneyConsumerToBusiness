@@ -6,7 +6,7 @@ namespace Application.ConsumerToBusiness.Commands
     {
         public CreateVoucherLogCommandValidator()
         {
-            RuleFor(x => x.TransId).NotEmpty();
+
         }
     }
 }

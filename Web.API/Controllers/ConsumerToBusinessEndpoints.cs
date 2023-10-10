@@ -19,10 +19,10 @@ namespace Web.API.Controllers
 
         public static async Task<IResult> ProcessConsumerToBusiness(
         ConsumerToBusinessRequest consumerToBusinessRequest,
-        ISender sender)
+        ISender sender,CancellationToken cancellationToken)
         {
             var command = consumerToBusinessRequest.Adapt<CreateConsumerToBusinessCommand>();
-            var response = await sender.Send(command);
+            var response = await sender.Send(command, cancellationToken);
             return Results.Ok(response);
         }
     }
